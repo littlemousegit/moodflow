@@ -1,0 +1,2081 @@
+/* Основные стили */
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--cream) 0%, var(--soft-gray) 100%);
+  font-family: 'Nunito', sans-serif;
+}
+
+.dark {
+  --cream: #2a2520;
+  --soft-gray: #3a3530;
+  --warm-white: #352e28;
+  --text-primary: #c8b8b0;
+  --text-secondary: #8a7f7a;
+  --card-bg: rgba(42, 37, 32, 0.8);
+}
+
+:root {
+  --cream: #fef7f1;
+  --soft-gray: #f5f0eb;
+  --warm-white: #fffaf5;
+  --text-primary: #5a524c;
+  --text-secondary: #8a7f7a;
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --accent: #5a524c;
+  --border: rgba(138, 127, 122, 0.2);
+}
+
+/* Аутентификация */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(135deg, var(--cream) 0%, var(--soft-gray) 100%);
+}
+
+.auth-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border);
+}
+
+.app-logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo-emoji {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.app-logo h1 {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.app-logo p {
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 16px;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  background: var(--warm-white);
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(255, 179, 138, 0.2);
+}
+
+.auth-button {
+  background: linear-gradient(135deg, #ffb38a 0%, #ffcfe5 100%);
+  color: #5a524c;
+  border: none;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.auth-button:hover {
+  transform: translateY(-2px);
+}
+
+.switch-auth {
+  background: none;
+  border: none;
+  color: var(--accent);
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Хедер */
+.header {
+  background: var(--card-bg);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand .logo {
+  font-size: 24px;
+}
+
+.brand h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.icon-button:hover {
+  background: var(--border);
+}
+
+.user-menu {
+  position: relative;
+}
+
+.user-button {
+  background: var(--border);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 8px;
+  min-width: 150px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 12px;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 8px;
+  color: var(--text-primary);
+}
+
+.menu-item:hover {
+  background: var(--border);
+}
+
+/* Навигация */
+.navigation {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-button {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+}
+
+.nav-button.active {
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+}
+
+.nav-button:hover:not(.active) {
+  background: var(--border);
+}
+
+/* Основной контент */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Вкладка "Сегодня" */
+.today-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.mood-selection h2 {
+  font-size: 28px;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.mood-selection > p {
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.moods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.mood-option {
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.mood-option:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.mood-option.selected {
+  border-color: var(--accent);
+  background: linear-gradient(135deg, var(--accent) 0%, rgba(255, 179, 138, 0.1) 100%);
+}
+
+.mood-emoji {
+  font-size: 40px;
+}
+
+.mood-description {
+  font-size: 14px;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.note-section {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid var(--border);
+}
+
+.note-section label {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.note-section textarea {
+  width: 100%;
+  padding: 16px;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  background: var(--warm-white);
+  font-size: 16px;
+  margin-bottom: 20px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.note-section textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.save-button {
+  width: 100%;
+  background: linear-gradient(135deg, #69db7c 0%, #4dabf7 100%);
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.save-button:hover {
+  transform: translateY(-2px);
+}
+
+.today-summary {
+  text-align: center;
+  background: var(--card-bg);
+  border-radius: 24px;
+  padding: 40px;
+  border: 1px solid var(--border);
+}
+
+.today-emoji {
+  font-size: 80px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.today-summary h3 {
+  font-size: 24px;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+
+.today-note {
+  background: var(--warm-white);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 24px 0;
+}
+
+.today-note p {
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.note-text {
+  color: var(--text-primary);
+  font-style: italic;
+}
+
+.view-calendar-button {
+  background: linear-gradient(135deg, #ffb38a 0%, #ffcfe5 100%);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.view-calendar-button:hover {
+  transform: translateY(-2px);
+}
+
+/* Календарь */
+.calendar-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.calendar-container h2 {
+  text-align: center;
+  font-size: 28px;
+  color: var(--text-primary);
+  margin-bottom: 30px;
+}
+
+.calendar {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  margin-bottom: 30px;
+}
+
+.calendar-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.calendar-day-header {
+  text-align: center;
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding: 8px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.calendar-day {
+  aspect-ratio: 1;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.calendar-day.today {
+  border-color: var(--accent);
+}
+
+.calendar-day.has-mood {
+  color: white;
+  font-weight: 600;
+}
+
+.day-number {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.day-mood {
+  font-size: 16px;
+}
+
+.mood-legend {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid var(--border);
+}
+
+.mood-legend p {
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.legend-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-emoji {
+  font-size: 20px;
+}
+
+.legend-text {
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+/* Статистика */
+.stats-container h2 {
+  text-align: center;
+  font-size: 28px;
+  color: var(--text-primary);
+  margin-bottom: 30px;
+}
+
+.no-data {
+  text-align: center;
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 60px 40px;
+  border: 1px solid var(--border);
+}
+
+.no-data p {
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.stat-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid var(--border);
+}
+
+.stat-card h3 {
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.chart-container {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quick-stats {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  display: block;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* Стили для выбора даты */
+.date-selection {
+  margin-bottom: 30px;
+}
+
+.date-selection label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.date-picker {
+  position: relative;
+  display: inline-block;
+}
+
+.date-display {
+  background: var(--warm-white);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.date-display:hover {
+  border-color: var(--accent);
+}
+
+.date-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 8px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+}
+
+.date-option {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 12px;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 8px;
+  color: var(--text-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s ease;
+}
+
+.date-option:hover {
+  background: var(--border);
+}
+
+.date-option.selected {
+  background: var(--accent);
+  color: white;
+}
+
+.date-option.has-mood {
+  border-left: 3px solid var(--accent);
+}
+
+.mood-indicator {
+  font-size: 18px;
+}
+
+/* Кнопки действий */
+.action-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.delete-button {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff8787 100%);
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  flex: 1;
+}
+
+.delete-button:hover {
+  transform: translateY(-2px);
+}
+
+/* Действия в календаре */
+.calendar-actions {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.add-mood-button {
+  background: linear-gradient(135deg, #69db7c 0%, #8ce99a 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.add-mood-button:hover {
+  transform: translateY(-2px);
+}
+
+.add-icon {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--text-secondary);
+}
+
+/* История настроений */
+.mood-history {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  margin-top: 30px;
+}
+
+.mood-history h3 {
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: var(--warm-white);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  transition: transform 0.2s ease;
+}
+
+.history-item:hover {
+  transform: translateX(4px);
+}
+
+.history-date {
+  min-width: 120px;
+  color: var(--text-primary);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.today-badge {
+  background: var(--accent);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.history-mood {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.mood-emoji-small {
+  font-size: 20px;
+}
+
+.mood-description-small {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.history-note {
+  flex: 2;
+  color: var(--text-secondary);
+  font-style: italic;
+  font-size: 14px;
+}
+
+.history-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-button, .delete-button-small {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+  font-size: 16px;
+}
+
+.edit-button:hover {
+  background: rgba(255, 179, 138, 0.2);
+}
+
+.delete-button-small:hover {
+  background: rgba(255, 107, 107, 0.2);
+}
+
+/* Адаптивность для новых элементов */
+@media (max-width: 768px) {
+  .date-dropdown {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    max-width: 300px;
+  }
+  
+  .history-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .history-actions {
+    align-self: flex-end;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+}
+
+/* Стили для выбора даты с ограничением будущих дат */
+.date-help {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.date-dropdown-header {
+  padding: 12px;
+  background: var(--border-light);
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-medium);
+  text-align: center;
+}
+
+.future-date {
+  opacity: 0.5;
+  cursor: not-allowed !important;
+}
+
+.future-date:hover {
+  background: transparent !important;
+}
+
+.future-badge {
+  background: var(--text-tertiary);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* Улучшенные стили для экспорта */
+.export-button {
+  background: linear-gradient(135deg, #ff6b6b, #4dabf7);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px var(--shadow-soft);
+}
+
+.export-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--shadow-medium);
+}
+
+/* Анимация загрузки экспорта */
+.export-loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.export-loading::after {
+  content: ' ⏳';
+}
+
+/* Адаптивность для выбора даты */
+@media (max-width: 768px) {
+  .date-dropdown {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    max-width: 300px;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+  
+  .date-option {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* Стили для ограничения будущих дат */
+.date-help {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.date-dropdown-header {
+  padding: 12px;
+  background: var(--border-light);
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-medium);
+  text-align: center;
+}
+
+.future-date {
+  opacity: 0.5;
+  cursor: not-allowed !important;
+}
+
+.future-date:hover {
+  background: transparent !important;
+  transform: none !important;
+}
+
+.future-badge {
+  background: var(--text-tertiary);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+.future-day {
+  cursor: not-allowed !important;
+  opacity: 0.6;
+}
+
+.future-day:hover {
+  transform: none !important;
+  border-color: transparent !important;
+}
+
+.future-icon {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* Стили для кнопки экспорта PDF */
+.export-pdf-button {
+  background: linear-gradient(135deg, #ff6b6b, #4dabf7);
+  color: white;
+  border: none;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px var(--shadow-soft);
+  margin: 20px 0;
+  width: 100%;
+}
+
+.export-pdf-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--shadow-medium);
+}
+
+.export-description {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.export-section {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 20px;
+  background: var(--warm-white);
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .date-dropdown {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    max-width: 300px;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+  
+  .date-option {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .export-pdf-button {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .auth-card {
+    padding: 30px 20px;
+  }
+  
+  .header-content {
+    padding: 0 16px;
+  }
+  
+  .navigation {
+    padding: 16px;
+  }
+  
+  .main-content {
+    padding: 16px;
+  }
+  
+  .moods-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .quick-stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .calendar-header,
+  .calendar-grid {
+    gap: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .moods-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .nav-button {
+    padding: 12px 8px;
+    font-size: 14px;
+  }
+  
+  .brand h1 {
+    font-size: 20px;
+  }
+}
+/* ========== ТЕПЛОВАЯ КАРТА ========== */
+.yearly-heatmap {
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.heatmap-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.heatmap-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.year-selector {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.year-selector button {
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 5px 12px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.year-selector button:hover {
+  background: var(--hover-bg);
+}
+
+.year-selector span {
+  font-size: 18px;
+  font-weight: bold;
+  min-width: 80px;
+  text-align: center;
+}
+
+/* Контейнер тепловой карты */
+.heatmap-wrapper {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+/* Основная структура */
+.heatmap-layout {
+  display: flex;
+  flex-direction: column;
+  min-width: 800px;
+}
+
+/* Строка с месяцами */
+.heatmap-months-row {
+  display: flex;
+  margin-left: 32px;
+  margin-bottom: 8px;
+  position: relative;
+  height: 24px;
+}
+
+.heatmap-month-label {
+  position: absolute;
+  font-size: 11px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+/* Строка с днями недели и сеткой */
+.heatmap-body {
+  display: flex;
+}
+
+/* Колонка с днями недели */
+.heatmap-weekdays-col {
+  display: flex;
+  flex-direction: column;
+  width: 32px;
+  margin-right: 4px;
+}
+
+.heatmap-weekday {
+  height: 18px;
+  font-size: 11px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+}
+
+/* Сетка недель */
+.heatmap-weeks {
+  display: flex;
+  flex: 1;
+}
+
+.heatmap-week {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2px;
+}
+
+/* Ячейка дня */
+.heatmap-day-cell {
+  width: 16px;
+  height: 16px;
+  margin: 1px;
+  border-radius: 2px;
+  transition: transform 0.1s ease;
+}
+
+.heatmap-day-cell:not(.empty):hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.heatmap-day-cell.empty {
+  background: transparent !important;
+}
+
+/* Легенда */
+.heatmap-legend {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  flex-wrap: wrap;
+}
+
+.legend-scale {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.legend-colors {
+  display: flex;
+  gap: 2px;
+}
+
+.legend-color {
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+}
+
+/* Статистика */
+.heatmap-stats {
+  margin-top: 15px;
+  padding: 12px;
+  background: var(--bg-primary);
+  border-radius: 8px;
+  font-size: 13px;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.heatmap-stats p {
+  margin: 0;
+}
+
+/* Заметка */
+.heatmap-note {
+  margin-top: 15px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-secondary);
+}
+
+/* ========== КОМПОНЕНТ ДРУЗЬЯ ========== */
+
+.friends-list-container {
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.friends-list-container h2 {
+  margin: 0 0 20px 0;
+  font-size: 24px;
+  color: var(--text-primary);
+}
+
+/* Вкладки */
+.friends-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+}
+
+.friends-tab {
+  background: transparent;
+  border: none;
+  padding: 8px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+  color: var(--text-secondary);
+}
+
+.friends-tab:hover {
+  background: var(--hover-bg);
+  color: var(--text-primary);
+}
+
+.friends-tab.active {
+  background: var(--primary-color, #4dabf7);
+  color: white;
+}
+
+/* Список друзей */
+.friends-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.friend-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-primary);
+  border-radius: 12px;
+  padding: 12px 16px;
+  transition: all 0.2s ease;
+  border: 1px solid var(--border);
+}
+
+.friend-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.friend-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.friend-avatar {
+  font-size: 32px;
+}
+
+.friend-name {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+.friend-email {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.remove-friend-btn {
+  background: rgba(239, 68, 68, 0.1);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #ef4444;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.remove-friend-btn:hover {
+  background: #ef4444;
+  color: white;
+}
+
+/* Заявки */
+.requests-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.request-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-primary);
+  border-radius: 12px;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+}
+
+.request-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.request-avatar {
+  font-size: 32px;
+}
+
+.request-name {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+.request-email {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.request-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.accept-btn {
+  background: rgba(34, 197, 94, 0.1);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #22c55e;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.accept-btn:hover {
+  background: #22c55e;
+  color: white;
+}
+
+.reject-btn {
+  background: rgba(239, 68, 68, 0.1);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #ef4444;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.reject-btn:hover {
+  background: #ef4444;
+  color: white;
+}
+
+/* Поиск друзей */
+.find-friends {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: var(--primary-color, #4dabf7);
+  box-shadow: 0 0 0 2px rgba(77, 171, 247, 0.2);
+}
+
+.users-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.user-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-primary);
+  border-radius: 12px;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  transition: all 0.2s ease;
+}
+
+.user-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar {
+  font-size: 32px;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+.user-email {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.add-friend-btn {
+  background: var(--primary-color, #4dabf7);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.add-friend-btn:hover {
+  background: #339af0;
+  transform: scale(1.02);
+}
+
+.friend-badge {
+  background: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.pending-badge {
+  background: rgba(234, 179, 8, 0.1);
+  color: #eab308;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.request-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+/* Пустое состояние */
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-secondary);
+}
+
+.empty-state p {
+  margin: 8px 0;
+}
+
+.empty-state p:first-child {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.empty-state p:last-child {
+  font-size: 14px;
+}
+
+/* ========== ЛЕНТА ДРУЗЕЙ ========== */
+
+.friends-feed {
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.feed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.feed-header h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.feed-filter {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.feed-filter button {
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s ease;
+  color: var(--text-secondary);
+}
+
+.feed-filter button:hover {
+  background: var(--hover-bg);
+}
+
+.feed-filter button.active {
+  background: var(--primary-color, #4dabf7);
+  border-color: var(--primary-color, #4dabf7);
+  color: white;
+}
+
+.feed-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.feed-card {
+  background: var(--bg-primary);
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  transition: all 0.2s ease;
+}
+
+.feed-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.feed-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-avatar {
+  font-size: 24px;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.entry-date {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.feed-card-mood {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.mood-emoji-large {
+  font-size: 40px;
+}
+
+.mood-description {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.feed-card-note {
+  background: var(--bg-secondary);
+  padding: 10px 12px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+.feed-card-reactions {
+  display: flex;
+  gap: 12px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.reaction-btn {
+  background: var(--bg-secondary);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  color: var(--text-secondary);
+}
+
+.reaction-btn:hover {
+  background: var(--hover-bg);
+  transform: scale(1.05);
+}
+
+.reaction-btn.active {
+  background: rgba(77, 171, 247, 0.2);
+  color: var(--primary-color, #4dabf7);
+}
+
+.feed-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-secondary);
+}
+
+.feed-empty p {
+  margin: 8px 0;
+}
+
+.feed-empty p:first-child {
+  font-size: 18px;
+}
+
+/* ========== АДМИН ПАНЕЛЬ ========== */
+
+.admin-panel {
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.admin-panel h1 {
+  margin: 0 0 20px 0;
+  font-size: 24px;
+}
+
+.admin-stats {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.admin-stat-card {
+  background: var(--bg-primary);
+  border-radius: 12px;
+  padding: 16px 24px;
+  text-align: center;
+  flex: 1;
+  min-width: 120px;
+  border: 1px solid var(--border);
+}
+
+.admin-stat-card .stat-value {
+  display: block;
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--primary-color, #4dabf7);
+}
+
+.admin-stat-card .stat-label {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+}
+
+.admin-tab {
+  background: transparent;
+  border: none;
+  padding: 8px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+  color: var(--text-secondary);
+}
+
+.admin-tab:hover {
+  background: var(--hover-bg);
+}
+
+.admin-tab.active {
+  background: var(--primary-color, #4dabf7);
+  color: white;
+}
+
+.admin-users-table {
+  overflow-x: auto;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.admin-users-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-users-table th,
+.admin-users-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.admin-users-table th {
+  background: var(--bg-primary);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.admin-users-table td {
+  color: var(--text-secondary);
+}
+
+.banned-user {
+  opacity: 0.6;
+  background: rgba(239, 68, 68, 0.05);
+}
+
+.ban-btn {
+  background: rgba(239, 68, 68, 0.1);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #ef4444;
+  font-size: 12px;
+}
+
+.unban-btn {
+  background: rgba(34, 197, 94, 0.1);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #22c55e;
+  font-size: 12px;
+}
+
+.admin-users-table select {
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  padding: 4px 8px;
+  border-radius: 6px;
+  color: var(--text-primary);
+}
+
+.complaint-card {
+  background: var(--bg-primary);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  border: 1px solid var(--border);
+}
+
+.complaint-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.complaint-body {
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.complaint-body p {
+  margin: 6px 0;
+}
+
+.complaint-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.delete-mood-btn {
+  background: rgba(239, 68, 68, 0.1);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #ef4444;
+}
+
+.resolve-btn {
+  background: rgba(34, 197, 94, 0.1);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #22c55e;
+}
+
+.admin-panel-access-denied {
+  text-align: center;
+  padding: 60px;
+  font-size: 18px;
+  color: var(--text-secondary);
+}
+
+/* Реакции в истории записей */
+.history-reactions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.reaction-badge {
+  background: var(--bg-secondary);
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid var(--border);
+}
+
+/* Реакции в ленте друзей (уже должно быть, но проверим) */
+.feed-card-reactions {
+  display: flex;
+  gap: 12px;
+  padding-top: 12px;
+  margin-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.reaction-btn {
+  background: var(--bg-secondary);
+  border: none;
+  padding: 6px 14px;
+  border-radius: 24px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.reaction-btn:hover {
+  background: var(--hover-bg);
+  transform: scale(1.05);
+}
+
+.reaction-btn.active {
+  background: rgba(77, 171, 247, 0.2);
+  color: var(--primary-color, #4dabf7);
+}
+
+/* Кнопка жалобы */
+.complaint-btn {
+  background: rgba(239, 68, 68, 0.1);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  color: #ef4444;
+  margin-left: auto;
+}
+
+.complaint-btn:hover {
+  background: #ef4444;
+  color: white;
+  transform: scale(1.05);
+}
+
+.complaint-btn-small {
+  background: rgba(239, 68, 68, 0.1);
+  border: none;
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #ef4444;
+}
+
+.complaint-btn-small:hover {
+  background: #ef4444;
+  color: white;
+}
+/* Статус пользователя */
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.status-badge.active {
+  background: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+}
+
+.status-badge.banned {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.current-user-badge {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.ban-user-btn {
+  background: rgba(239, 68, 68, 0.1);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #ef4444;
+}
+
+.ban-user-btn:hover {
+  background: #ef4444;
+  color: white;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
